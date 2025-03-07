@@ -3,6 +3,12 @@ title: "A math-light introduction to Bayesian statistics"
 author: "Stefano Mezzini"
 date: "2025-02-25"
 output: bookdown::html_document2
+## for making a pdf
+# header-includes:
+#     - \usepackage{setspace}\doublespacing # for double-spaced text
+#     - \usepackage{indentfirst} # for indenting first line of each paragraph
+# indent: true
+# output: bookdown::pdf_document2
 ---
 
 ```{r setup, include=FALSE}
