@@ -1,0 +1,69 @@
+/* logo on title page */
+.gdbar img {
+  width: 190px !important;
+  height: 64px !important;
+  margin: 10px 10px;
+}
+
+.gdbar {
+  width: 220px !important; /* includes margin! */
+  height: 90px !important; /* includes margin! */
+  background: #FFFFFF;
+}
+
+/* logo on all other slides */
+slides > slide:not(.nobackground):before {
+  width: 113.5px !important;
+  height: 38.4px !important;
+  background-size: 113.5px 38.4px;
+  left: 20px;
+  bottom: 10px;
+  content: '';
+}
+
+/* remove shaded background */
+slides > slide {
+  background-image: none;
+}
+
+/* hide page numbering */
+slides > slide:not(.nobackground):after {
+  content: '';
+}
+
+/* main headers */
+hgroup h2 {
+  color: #000000;
+  font-size: 35px;
+}
+
+hgroup h3 {
+  color: #000000;
+  font-size: 25px;
+  font-style: italic;
+}
+
+/* main text */
+body p {
+  color: #000000;
+}
+
+body li {
+  color: #000000;
+}
+
+/* make title slides have no background */
+slides > slide.dark {
+  background: black !important;
+  background-color: black !important;
+}
+
+/* make title slides have white titles */
+slides > slide.segue > hgroup h2 {
+  color: #FFFFFF;
+}
+
+/* tests */
+slides > slide.segue > hgroup h2.test {
+  color: red !important;
+}

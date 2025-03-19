@@ -80,7 +80,7 @@ Now you can see how the "no information" prior is different from the "uncertain"
 
 # Likelihood: the information in the data
 
-Once you have defined your prior, it is time to **collect some data** so you can update your belief based on the evidence. To do this, you may inspect the frame and the area around it. Is anything else out of order? Are other objects knocked down? Could your cat have reached the frame? The answer to each of these questions can be summarized into a new distribution: the **likelihood**. The likelihood contains all the information you gathered from inspecting the scene (or running an experiment). Formally, it is the probability of obtaining the information (or data, $D$) you obtained, for some value of $\theta$, and we can write it as $P(D | \theta)$. This is what the Frequentist approach to statistics is based on: $p$-values are the probability of observing the dataset you observed or a more unlikely one, if $\theta$ has the value specified by the null hypothesis, which we can write as $P(D|H_0: \theta = \theta_0)$. If you calculate $P(D|\theta = \theta_i)$ for all possible values of $\theta$ rather than just the value from $H_0$, you get the probability distribution of $D$ conditional on $\theta$, which is the likelihood $P(D|\theta)$.
+Once you have defined your prior, it is time to **collect some data** so you can update your belief based on the evidence. To do this, you may inspect the frame and the area around it. Is anything else out of order? Are other objects knocked down? Could your cat have reached the frame? The answer to each of these questions can be summarized into a new distribution: the **likelihood**. The likelihood contains all the information you gathered from inspecting the scene (or running an experiment). Formally, it is the probability of obtaining the information (or data, $D$) you obtained, for some value of $\theta$, and we can write it as $P(D | \theta)$. This is what the Frequentist approach to statistics is based on: $p$-values are the probability of observing the dataset you observed or a more unlikely one, if $\theta$ has the value specified by the null hypothesis, which we can write as $P(D|H_0: \theta = \theta_0)$. If you calculate $P(D|\theta = \theta_i)$ for all possible values of $\theta$ rather than just the value from $H_0$, you get the probability distribution of $D$ conditional on $\theta$, which is the full likelihood distribution, $P(D|\theta)$.
 
 When you inspect the objects around the frame, you notice that other things are knocked over, and the nail the frame was hanging from seems to have have given out due to excessive weight. In this case, the likelihood may look like something like this:
 
@@ -127,7 +127,7 @@ As you can see, your starting belief impacts whether or not you believe your cat
 d %>%
   group_by(prior_name) %>%
   summarize(certainty_guilty = sum(posterior * (theta >= 0.5)) / sum(posterior)) %>%
-  rename(Prior = prior_name, 'Certainty of cat being guilty' = certainty_guilty) %>%
+  rename(Prior = prior_name, 'P(\U03B8 > 0.5)' = certainty_guilty) %>%
   knitr::kable(format = 'pipe', digits = 2, caption = "Degree of certainty in the posterior that the cat broke the frame, conditional on each prior in Figure \\@ref(fig:priors).")
 ```
 
