@@ -48,6 +48,4 @@ po/*~
 # RStudio Connect folder
 rsconnect/
 
-# cache folders
-/*_files/*
 /libs

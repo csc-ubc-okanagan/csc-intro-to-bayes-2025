@@ -13,10 +13,12 @@ output:
 
 <!-- Need to make title for likelihood segue slide black manually. Change
 
-<h2> Likelihood </h2><h3> The information in the data</h3>
+<h2>Likelihood </h2><h3> The information in the data</h3>
+<h2>Posterior </h2><h3> Your updated belief</h3>
 
 to
 
+<h2 style="color:#000000 ! important;"> Likelihood </h2><h3 style="color:#000000 ! important; background-color: #E9E9E990"> The information in the data</h3>
 <h2 style="color:#000000 ! important;"> Likelihood </h2><h3 style="color:#000000 ! important; background-color: #E9E9E990"> The information in the data</h3>
 
 may need to turn avast off to allow latex to render
@@ -181,7 +183,7 @@ p_l
 p_l
 ```
 
-# Posterior | Your updated belief {data-background=images/carter-rubio-ElSB3j6U-xM-unsplash.jpg data-background-size=cover}
+# Posterior | Your updated belief {data-background=images/jason-leung-cwhtQIssH9k-unsplash.jpg data-background-size=cover}
 
 ## Did the cat knock the frame off the wall?
 
