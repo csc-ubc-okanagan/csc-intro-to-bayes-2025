@@ -11,6 +11,18 @@ output:
     css: style-clean.css
 ---
 
+<!-- Need to make title for likelihood segue slide black manually. Change
+
+<h2> Likelihood </h2><h3> The information in the data</h3>
+
+to
+
+<h2 style="color:#000000 ! important;"> Likelihood </h2><h3 style="color:#000000 ! important; background-color: #E9E9E990"> The information in the data</h3>
+
+may need to turn avast off to allow latex to render
+-->
+
+
 ```{r setup, include=FALSE}
 library('dplyr')
 library('tidyr')
@@ -125,10 +137,7 @@ Frequentist statistics:
 - Not interested in finding the most likely value of $\theta$
 - $\mathcal L(\theta | \text{data})$ is a function, not a probability distribution
 
-<!-- old cat picture that does not go with white text -->
-<!-- # Likelihood | The information in the data {data-background=images/paul-hanaoka-w2DsS-ZAP4U-unsplash.jpg data-background-size=cover} -->
-
-# Likelihood | The information in the data {data-background=images/daria-shatova-46TvM-BVrRI-unsplash.jpg data-background-size=cover}
+# Likelihood | The information in the data {data-background=images/paul-hanaoka-w2DsS-ZAP4U-unsplash.jpg data-background-size=cover}
 
 ## Likelihood | Learning from data
 

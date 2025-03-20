@@ -41,6 +41,7 @@ hgroup h3 {
   color: #000000;
   font-size: 25px;
   font-style: italic;
+  font-weight: bold;
 }
 
 /* main text */
@@ -60,7 +61,7 @@ slides > slide.dark {
 
 /* make title slides have white titles */
 slides > slide.segue > hgroup h2 {
-  color: #FFFFFF;
+  color: #e9e9e9;
 }
 
 /* tests */
